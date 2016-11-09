@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Typewriter.js</title>
+
+	<link href="css/styles.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/typewriter.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+	<div id="container">
+
+        <div id="headline">
+            <h1>Typewriter.js</h1>
+            <h2 id="description"></h2>
+            <button id="download-button" class="button-white raised-button" alt="Download typewriter.js" aria-label="Download typewriter.js"><i class="material-icons">file_download</i><span>Download .js</span></button>
+            <button class="workspace-toggle button-white raised-button" data-target="usage" alt="Instructions on how to use typewriter.js and examples." aria-label="Instructions on how to use typewriter.js and examples."><i class="material-icons">info_outline</i><span>How to use it + Examples</span></button>
+            <a class="link-button button-white raised-button" href="http://github.com/ryanjairam/typewriter.git" alt="Visit the GitHub Repository" aria-label="Visit the GitHub Repository"><i class="material-icons">folder</i><span>View on GitHub</span></a>
+        </div>
+
+		<div id="paper"></div>
+
+		<button id="drawer-toggle" class="raised-button"><i class="material-icons">menu</i></button>
+
+		<div id="overlay"></div>
+
+        <div id="github-buttons">
+            <a class="github-button" href="https://github.com/ryanjairam" data-style="mega" data-count-href="/ryanjairam/followers" data-count-api="/users/ryanjairam#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @ryanjairam on GitHub">Follow @ryanjairam</a>
+            <a class="github-button" href="https://github.com/ryanjairam/typewriter" data-icon="octicon-star" data-style="mega" data-count-href="/ryanjairam/typewriter/stargazers" data-count-api="/repos/ryanjairam/typewriter#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ryanjairam/typewriter on GitHub">Star</a>
+        </div>
+	</div>
+
+    <div id="workspace">
+        <button id="workspace-close-button" class="flat-button"><i class="material-icons">close</i></button>
+
+        <h2>Documentation</h2>
+        <button id="usage-toggle" class="doc-section-button raised-button" data-target="usage">Usage</button>
+        <button id="examples-toggle" class="doc-section-button raised-button" data-target="examples">Examples</button>
+
+        <div id="documentation">
+            <div id="usage" class="doc-page">
+                <p class="doc-blurb">
+                    Typewriter.js is a jQuery plugin for displaying text using a typewriter effect.
+                </p>
+                <br><button id="whats-that" class="raised-button">What's that?</button><span id="whats-that-sample"></span>
+
+                <h3>Adding it to your project</h3>
+                <p class="doc-blurb">
+                    Download typewriter.js and add it to your project.
+                </p>
+                <xmp class="source-code"><script src="/path/to/typewriter.js"></script></xmp>
+
+                <h3>Methods</h3>
+                <table class="table-fill">
+                    <thead>
+                        <tr><th>Method</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="method">.typeIt(text, typeDelay, format)</td>
+                            <td>
+                                <p class="placeholder-description-title">text</p>
+                                <p class="placeholder-description">The text you want to have typed.</p>
+
+                                <p class="placeholder-description-title">typeDelay</p>
+                                <p class="placeholder-description">
+                                The base delay value to use between the display of each character. Typewriter.js
+                                automatically adds some variability to make the typing effect more natural.
+                                A value of 0.06 produces good results.
+                                </p>
+
+                                <p class="placeholder-description-title">format</p>
+                                <p class="placeholder-description">
+                                    This can be either 'text' or 'html'. Use 'html' if you want to include line breaks.
+                                    There is currently no support for text formatting tags (bold, italics etc).
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.deleteIt(amount, rate)</td>
+                            <td>
+                                <p class="placeholder-description-title">amount</p>
+                                <p class="placeholder-description">
+                                    The number of characters to delete from the end of element.
+                                </p>
+
+                                <p class="placeholder-description-title">rate</p>
+                                <p class="placeholder-description">
+                                    The base delay value to use between the deletion of each character. Typewriter.js
+                                    automatically adds some variability to make the backspace effect more natural.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.pauseIt(seconds)</td>
+                            <td>
+                                <p class="placeholder-description-title">seconds</p>
+                                <p class="placeholder-description">
+                                    The number of seconds to pause before continuing.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.hideCursor()</td>
+                            <td>
+                                <p class="placeholder-description">
+                                    Hides the blinking cursor.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.showCursor()</td>
+                            <td>
+                                <p class="placeholder-description">
+                                    Shows the blinking cursor.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.clearIt()</td>
+                            <td>
+                                <p class="placeholder-description">
+                                    Clears all typed text.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="method">.destroyIt()</td>
+                            <td>
+                                <p class="placeholder-description">
+                                    Destroys all typewriter related content contained in the object.
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="examples" class="doc-page">
+                <div class="example">
+                    <h3>Simple typing</h3>
+                    <xmp class="source-code">$('#target').typeIt('This is a sentence that was typed.', 0.06, 'text').hideCursor();</xmp>
+                    <div class="example-output">&nbsp;</div>
+                    <button id="example-run-1" class="run-it raised-button">Run it</button>
+                </div>
+
+                <div class="example">
+                    <h3>Typing with backtracking</h3>
+
+                    <xmp class="source-code">$('#target').typeIt('There is an eraaasasa in this sentence!', 0.06, 'text')
+            .pauseIt(1)
+            .deleteIt(27, 0.09)
+            .typeIt('was an error in this sentence.', 0.05, 'text')
+            .hideCursor();</xmp>
+
+                    <div class="example-output">&nbsp;</div>
+                    <button id="example-run-2" class="run-it raised-button">Run it</button>
+                </div>
+
+                <div class="example">
+                    <h3>Line breaks!</h3>
+
+                    <xmp class="source-code">$('#target').typeIt('This is the first sentence.', 0.04, 'text')
+            .pauseIt(0.2)
+            .typeIt('\n This is a new line using the text format.', 0.07, 'text')
+            .typeIt('<br> This is a new line using the html format.', 0.04, 'html')
+            .pauseIt(1)
+            .hideCursor();</xmp>
+
+                    <div class="example-output">&nbsp;</div>
+                    <button id="example-run-3" class="run-it raised-button">Run it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
