@@ -55,7 +55,7 @@ $(document).ready(function(){
     // Show example 2
     $('#example-run-2').click(function(){
         var target = $(this).siblings('.example-output');
-        target.clearIt().typeIt('There is an eraaasasa in this sentence!', 0.06, 'text').pauseIt(1).deleteIt(30, 0.09).typeIt('are no errors in this sentence. ;)', 0.05, 'text').hideCursor();
+        target.clearIt().typeIt('There is an eraaasasa in this sentence!', 0.06, 'text').pauseIt(1).deleteIt(33, 0.09).typeIt('are no errors in this sentence. ;)', 0.05, 'text').hideCursor();
     });
 
     // Show example 3
